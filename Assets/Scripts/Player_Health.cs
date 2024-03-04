@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Player_Health : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float health;
+    public float maxhealth;
+
     void Start()
     {
-        
+        health = maxhealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void TakeDamage(float damage){
+        health -= damage;
+        CheckDeath();
+    }
+
+    private void CheckOverheal(){
+        if (health > maxhealth){
+            health = maxhealth;
+        }
+    }
+
+    private void CheckDeath(){
+        if (health <= 0){
+            Destroy(gameObject);
+        }
     }
 }

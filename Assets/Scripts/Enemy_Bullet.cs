@@ -11,5 +11,10 @@ public class Enemy_Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(collision.GetComponent<Player_Health>() != null)
+        {
+            collision.GetComponent<Player_Health>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
