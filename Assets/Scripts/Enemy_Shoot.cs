@@ -10,6 +10,7 @@ public class Enemy_Shoot : MonoBehaviour
     public float maxDamage;
     public float projectileForce;
     public float cooldown;
+    public float spawnDistance = 1.0f;
 
     void Start()
     {
@@ -28,6 +29,27 @@ public class Enemy_Shoot : MonoBehaviour
             shoot.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             shoot.GetComponent<Enemy_Bullet>().damage = Random.Range(minDamage, maxDamage);
             StartCoroutine(ShootPlayer());
+        }
+        IEnumerator ShootPlayer()
+        {
+            yield return new WaitForSeconds(cooldown);
+            if (player != null)
+            {
+                Vector2 mypos = transform.position;
+                Vector2 playerpos = player.position;
+                Vector2 direction = (playerpos - mypos).normalized;
+
+                // Calculate an offset position in front of the enemy
+                float spawnDistance = 1.0f; // Adjust this value based on the size of your enemy's collider
+                Vector2 spawnPos = mypos + direction * spawnDistance;
+
+                GameObject shoot = Instantiate(Projectile, spawnPos, Quaternion.identity);
+
+                shoot.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+                shoot.GetComponent<Enemy_Bullet>().damage = Random.Range(minDamage, maxDamage);
+
+                StartCoroutine(ShootPlayer());
+            }
         }
     }
 }

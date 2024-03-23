@@ -12,6 +12,7 @@ public class Enemy_AI : EnemyState2
     public float attackRadius;
     public Transform homePosition;
     public Animator anim;
+   
 
     // Start is called before the first frame update
     void Start()
