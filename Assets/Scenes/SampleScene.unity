@@ -361,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 772825535}
   checkRadius: 2
-  jumpForce: {x: -1, y: 1}
+  jumpForce: {x: -0.5, y: 0.5}
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 2
