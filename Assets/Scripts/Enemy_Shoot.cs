@@ -19,6 +19,7 @@ public class Enemy_Shoot : MonoBehaviour
 
     IEnumerator ShootPlayer()
     {
+
         yield return new WaitForSeconds(cooldown);
         if (player != null)
         {
