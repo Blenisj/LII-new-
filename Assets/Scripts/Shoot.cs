@@ -11,6 +11,10 @@ public class Shoot : MonoBehaviour
     public float projectileForce;
     void Update()
     {
+        if (PauseMenu.GameIsPaused)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             GameObject shoot =Instantiate(Projectile, transform.position, Quaternion.identity);
