@@ -9,6 +9,10 @@ public class BulletSwitcher : MonoBehaviour
     public float projectileForce = 10f;
     public float minDamage;
     public float maxDamage;
+    AudioManager audioManager;
+   
+
+
 
     void Update()
     {
@@ -22,7 +26,12 @@ public class BulletSwitcher : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
             ShootCurrentBullet();
+            
         }
+    }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void SwitchBullet()
@@ -54,6 +63,8 @@ public class BulletSwitcher : MonoBehaviour
                 {
                     bulletComponent.damage = Random.Range(minDamage, maxDamage);
                 }
+                audioManager.PlaySFX(audioManager.LaserGun);
+
             }
             else
             {

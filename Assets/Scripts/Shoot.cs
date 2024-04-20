@@ -9,6 +9,11 @@ public class Shoot : MonoBehaviour
     public float minDamage;
     public float maxDamage;
     public float projectileForce;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Update()
     {
         if (PauseMenu.GameIsPaused)
@@ -17,6 +22,7 @@ public class Shoot : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
+            audioManager.PlaySFX(audioManager.LaserGun);
             GameObject shoot =Instantiate(Projectile, transform.position, Quaternion.identity);
             Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mypos = transform.position;
