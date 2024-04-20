@@ -31373,7 +31373,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5411765}
   m_Origin: {x: -40, y: -17, z: 0}
   m_Size: {x: 70, y: 46, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -34051,6 +34051,7 @@ PolygonCollider2D:
       - {x: -30.052027, y: 22.246334}
       - {x: 3.3098736, y: 27.67183}
       - {x: 22.609066, y: 12.334123}
+      - {x: 16.835625, y: 5.7882466}
       - {x: 12.92431, y: 0.65103054}
       - {x: 12.814828, y: 4.9561105}
   m_UseDelaunayMesh: 0
