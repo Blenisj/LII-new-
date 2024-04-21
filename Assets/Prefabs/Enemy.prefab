@@ -13,10 +13,12 @@ GameObject:
   - component: {fileID: 5096650849293107993}
   - component: {fileID: 5784991056057670121}
   - component: {fileID: -3595702751809924614}
-  - component: {fileID: 1618990381528040749}
+  - component: {fileID: 1333348463696787947}
+  - component: {fileID: 474086012821230043}
+  - component: {fileID: 805895916045138155}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +123,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -168,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxhealth: 100
---- !u!114 &1618990381528040749
+--- !u!114 &1333348463696787947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,10 +182,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406ab223dfaf2db43818e386b80c7c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4132623966889923848, guid: fc4cdc640776b1e4fade8170abc4b1e2, type: 3}
+  player: {fileID: 0}
   Projectile: {fileID: 3240944516025205935, guid: 26ebbd86b279e3243af8e573e4313fc2, type: 3}
-  minDamage: 20
+  minDamage: 10
   maxDamage: 30
-  projectileForce: 5
-  cooldown: 1
+  projectileForce: 4
+  minCooldown: 0.5
+  maxCooldown: 1.5
   spawnDistance: 1
+--- !u!114 &474086012821230043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204712627174449513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6254ccf523e1184b9fa53065184edf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  health: 2
+  enemyName: Enemybasic
+  baseAttack: 1
+  moveSpeed: 2
+  target: {fileID: 0}
+  chaseRadius: 10
+  attackRadius: 3
+  homePosition: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!50 &805895916045138155
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204712627174449513}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
