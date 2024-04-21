@@ -9,8 +9,7 @@ public class Enemy_Shoot : MonoBehaviour
     public float minDamage;
     public float maxDamage;
     public float projectileForce;
-    public float minCooldown;
-    public float maxCooldown;
+    public float cooldown;
     public float spawnDistance = 1.0f;
 
     void Start()
@@ -20,8 +19,8 @@ public class Enemy_Shoot : MonoBehaviour
 
     IEnumerator ShootPlayer()
     {
-        float randomCooldown = Random.Range(minCooldown, maxCooldown);
-        yield return new WaitForSeconds(randomCooldown);
+
+        yield return new WaitForSeconds(cooldown);
         if (player != null)
         {
             GameObject shoot = Instantiate(Projectile, transform.position, Quaternion.identity);
@@ -34,7 +33,7 @@ public class Enemy_Shoot : MonoBehaviour
         }
         IEnumerator ShootPlayer()
         {
-            yield return new WaitForSeconds(randomCooldown);
+            yield return new WaitForSeconds(cooldown);
             if (player != null)
             {
                 Vector2 mypos = transform.position;

@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 1083967582077454137}
   - component: {fileID: 1076116570707760831}
   - component: {fileID: 1916454172154182991}
+  - component: {fileID: 4023437913863903275}
   - component: {fileID: 4339067223433820155}
-  - component: {fileID: 6289841300673261588}
-  - component: {fileID: 3579794625460867254}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,8 +96,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1417067625
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1555908657, guid: dbd89ede53c36084d9ee86b448ec7a86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,7 +167,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab9c7c562eb9ca4fb37c6853c1da281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
+--- !u!114 &4023437913863903275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109623318834951985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96efa59d97316540816cbc6e7651615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
+  minDamage: 20
+  maxDamage: 30
+  projectileForce: 5
 --- !u!114 &4339067223433820155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,52 +196,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e04314ff712694cb1d44e91012d578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
-  maxhealth: 200
---- !u!50 &6289841300673261588
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109623318834951985}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &3579794625460867254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109623318834951985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26205e2a96180548bf0d6643114c87e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefabs:
-  - {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
-  - {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  projectileForce: 5
-  minDamage: 10
-  maxDamage: 30
+  health: 100
+  maxhealth: 100
