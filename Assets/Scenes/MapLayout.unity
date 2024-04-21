@@ -1359,14 +1359,34 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1201971018}
-  - component: {fileID: 1201971019}
+  - component: {fileID: 1201971017}
   m_Layer: 0
-  m_Name: AudioManager2
+  m_Name: AudioManager
   m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1201971017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201971016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b8e5bcddb4183438a0dfe8479321d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 624102765}
+  SFXSource: {fileID: 1928626818}
+  introSong: {fileID: 0}
+  backGround: {fileID: 8300000, guid: cc2eda0f5329ba548b531f70dd26a0c0, type: 3}
+  bossBattle: {fileID: 0}
+  death: {fileID: 0}
+  shoot: {fileID: 0}
+  LaserGun: {fileID: 8300000, guid: 4a9839abff8ab0246a3531b9e653117c, type: 3}
 --- !u!4 &1201971018
 Transform:
   m_ObjectHideFlags: 0
@@ -1384,26 +1404,6 @@ Transform:
   - {fileID: 1928626819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1201971019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201971016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b726954a544f54548b03b1139092c1af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 624102765}
-  SFXSource: {fileID: 1928626818}
-  introSong: {fileID: 0}
-  backGround: {fileID: 8300000, guid: cc2eda0f5329ba548b531f70dd26a0c0, type: 3}
-  death: {fileID: 0}
-  shoot: {fileID: 0}
-  laserGun: {fileID: 8300000, guid: 4a9839abff8ab0246a3531b9e653117c, type: 3}
-  bossBattle: {fileID: 0}
 --- !u!1001 &1288680386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1658,7 +1658,6 @@ MonoBehaviour:
   bulletPrefabs:
   - {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
   - {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
-  - {fileID: 595647642}
   projectileForce: 8
   minDamage: 10
   maxDamage: 100
