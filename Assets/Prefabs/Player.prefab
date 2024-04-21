@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefabs:
   - {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
-  - {fileID: 3240944516025205935, guid: 9a188044b820424488c2fbc618b7d142, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   projectileForce: 5
