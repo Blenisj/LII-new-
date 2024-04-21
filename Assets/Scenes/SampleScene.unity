@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 123829260}
   - component: {fileID: 123829261}
   m_Layer: 0
-  m_Name: AudioManager3
+  m_Name: AudioManager
   m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1600,17 +1600,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 123829259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15325582a05ed3d48bade8082ea87013, type: 3}
+  m_Script: {fileID: 11500000, guid: 67b8e5bcddb4183438a0dfe8479321d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 280780572}
   SFXSource: {fileID: 1591943771}
   introSong: {fileID: 0}
   backGround: {fileID: 0}
+  bossBattle: {fileID: 8300000, guid: effb67de14817104782ac293a15f6aee, type: 3}
   death: {fileID: 0}
   shoot: {fileID: 0}
-  laserGun: {fileID: 8300000, guid: 4a9839abff8ab0246a3531b9e653117c, type: 3}
-  bossBattle: {fileID: 8300000, guid: effb67de14817104782ac293a15f6aee, type: 3}
+  LaserGun: {fileID: 8300000, guid: 4a9839abff8ab0246a3531b9e653117c, type: 3}
 --- !u!1 &162292074
 GameObject:
   m_ObjectHideFlags: 0
